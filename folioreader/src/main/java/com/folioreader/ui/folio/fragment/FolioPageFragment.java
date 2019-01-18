@@ -488,8 +488,8 @@ public class FolioPageFragment
                     mWebview.loadUrl(call);
 
                 } else if (isCurrentFragment()) {
-                    mWebview.loadUrl(String.format("javascript:scrollToSpan(%b, %s)",
-                            lastReadPosition.isUsingId(), lastReadPosition.getValue()));
+                    String spanId = lastReadPosition.getValue();
+                    mWebview.loadUrl("javascript:setPageFromSpanId('" + spanId + "')");
 
                 } else {
                     if (mPosition == mActivityCallback.getCurrentChapterIndex() - 1) {
@@ -532,8 +532,8 @@ public class FolioPageFragment
 
                 if (readPosition != null) {
                     Log.v(LOG_TAG, "-> scrollToSpan -> " + readPosition.getValue());
-                    mWebview.loadUrl(String.format("javascript:scrollToSpan(%b, %s)",
-                            readPosition.isUsingId(), readPosition.getValue()));
+                    String spanId = readPosition.getValue();
+                    mWebview.loadUrl("javascript:setPageFromSpanId('" + spanId + "')");
                 } else {
                     loadingView.hide();
                 }
