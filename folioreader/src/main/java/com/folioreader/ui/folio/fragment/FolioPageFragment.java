@@ -533,7 +533,8 @@ public class FolioPageFragment
                 if (readPosition != null) {
                     Log.v(LOG_TAG, "-> scrollToSpan -> " + readPosition.getValue());
                     String spanId = readPosition.getValue();
-                    mWebview.loadUrl("javascript:setPageFromSpanId('" + spanId + "')");
+//                    mWebview.loadUrl("javascript:setPageFromSpanId('" + spanId + "')");
+                    mWebview.loadUrl("javascript:scrollToElement('" + spanId + "')");
                 } else {
                     loadingView.hide();
                 }
