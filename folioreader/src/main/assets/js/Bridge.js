@@ -728,8 +728,8 @@ function setPageFromSpanId(idString) {
 }
 
 function getFirstSpanId() {
-    console.log("SpanIdFirst wpadlo: " + elements);
     var elements = $('span:in-viewport');
+    console.log("SpanIdFirst wpadlo: " + elements);
     var element = $(elements).first();
     console.log("SpanIdFirst wpadlo: " + element);
     for (var i=0; i<elements.length; i++) {
