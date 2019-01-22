@@ -31,6 +31,9 @@ public final class HtmlUtil {
                 "file:///android_asset/js/jquery-3.1.1.min.js") + "\n";
 
         jsPath = jsPath + String.format(context.getString(R.string.script_tag),
+                "file:///android_asset/js/jquery.viewport.mini.js") + "\n";
+
+        jsPath = jsPath + String.format(context.getString(R.string.script_tag),
                 "file:///android_asset/js/rangy-core.js") + "\n";
 
         jsPath = jsPath + String.format(context.getString(R.string.script_tag),
