@@ -723,7 +723,7 @@ function setPageFromSpanId(idString) {
     $('body').scrollLeft(ourW * page);
     $('#'+ idString).css('font-weight','Bold');
     spanId = getFirstSpanId();
-    Callback.setCurrentPage(page, spanId);
+    scrollToElement(spanId);
     $('html').css({
         'visibility' : 'visible'
     });
