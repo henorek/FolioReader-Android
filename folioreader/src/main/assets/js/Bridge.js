@@ -714,16 +714,10 @@ function scrollToSpan(usingId, value) {
 
 function setPageFromSpanId(idString) {
     console.log("Span to set: " + idString);
-    var windows = document.getElementsByTagName('body')[0];
-    var d = document.getElementById(idString);
-    var offsets = d.getBoundingClientRect();
-    var left = offsets.left;
-    var ourW = window.innerWidth;
-    var page = Math.ceil(left/ourW) -1;
     $('#'+ idString).css('font-weight','Bold');
     spanId = getFirstSpanId();
     console.log("SpanId: " + spanId);
-    scrollToElement(spanId);
+    scrollToElement(idString);
 }
 
 function getFirstSpanId() {
