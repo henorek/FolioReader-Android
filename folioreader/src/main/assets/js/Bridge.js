@@ -712,27 +712,6 @@ function scrollToSpan(usingId, value) {
     LoadingView.hide();
 }
 
-function scrollToSpan2(usingId, value) {
-
-    if (usingId) {
-        var spanElement = document.getElementById(value);
-        console.log("Span to scrollToSpan2: " + spanElement);
-        if (spanElement)
-            console.log("Span to scrollToSpan2: " + spanElement);
-            scrollToElement(spanElement);
-    } else {
-        var spanCollection = document.querySelectorAll("span.sentence");;
-        if (spanCollection.length == 0 || value < 0 || value >= spanCollection.length
-            || value == null) {
-            LoadingView.hide();
-            return;
-        }
-        scrollToElement(spanCollection[value]);
-    }
-
-    LoadingView.hide();
-}
-
 function setPageFromSpanId(idString) {
     console.log("Span to set: " + idString);
     var windows = document.getElementsByTagName('body')[0];
@@ -749,9 +728,7 @@ function setPageFromSpanId(idString) {
 
 function getFirstSpanId() {
     var elements = $('span:in-viewport');
-    console.log("SpanIdFirst wpadlo: " + elements);
     var element = $(elements).first();
-    console.log("SpanIdFirst wpadlo: " + element);
     for (var i=0; i<elements.length; i++) {
         if(elements[i].hasAttribute('id')) {
             element = elements[i];
@@ -980,7 +957,24 @@ function scrollToElement(ele) {
         var clientWidth = document.documentElement.clientWidth;
         console.log("-> offsetLeft = " + element.offsetLeft);
         console.log("-> clientWidth = " + clientWidth);
-        var pageIndex = Math.floor(element.offsetLeft / clientWidth);
+
+
+
+
+
+            var windows = document.getElementsByTagName('body')[0];
+            var d = document.getElementById(idString);
+            var offsets = d.getBoundingClientRect();
+            var left = offsets.left;
+            var ourW = window.innerWidth;
+            var page = Math.ceil(left/ourW) -1;
+
+        var pageIndex = Math.ceil(left/ourW) -1;
+
+
+
+
+//        var pageIndex = Math.floor(element.offsetLeft / clientWidth);
         var newScrollLeft = clientWidth * pageIndex;
         console.log("-> pageIndex = " + pageIndex);
         console.log("-> newScrollLeft = " + newScrollLeft);
