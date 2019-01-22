@@ -957,27 +957,8 @@ function scrollToElement(ele) {
         var clientWidth = document.documentElement.clientWidth;
         console.log("-> offsetLeft = " + element.offsetLeft);
         console.log("-> clientWidth = " + clientWidth);
-
-
-
-
-
-            var windows = document.getElementsByTagName('body')[0];
-            var d = document.getElementById(ele);
-            var offsets = d.getBoundingClientRect();
-            var left = offsets.left;
-            var ourW = window.innerWidth;
-            var page = Math.ceil(ourW * 25 / left) -1;
-
-            console.log("-> ourW = " + ourW);
-            console.log("-> left = " + left);
-
-        var pageIndex = Math.ceil(ourW/left) -1;
-
-
-
-
 //        var pageIndex = Math.floor(element.offsetLeft / clientWidth);
+        var pageIndex = Math.floor(clientWidth / element.offsetLeft);
         var newScrollLeft = clientWidth * pageIndex;
         console.log("-> pageIndex = " + pageIndex);
         console.log("-> newScrollLeft = " + newScrollLeft);
