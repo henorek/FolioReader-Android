@@ -741,7 +741,6 @@ function setPageFromSpanId(idString) {
     var left = offsets.left;
     var ourW = window.innerWidth;
     var page = Math.ceil(left/ourW) -1;
-    $('body').scrollLeft(ourW * page);
     $('#'+ idString).css('font-weight','Bold');
     spanId = getFirstSpanId();
     console.log("SpanId: " + spanId);
