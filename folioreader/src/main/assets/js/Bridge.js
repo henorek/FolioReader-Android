@@ -922,9 +922,10 @@ function bodyOrHtml() {
     return document.documentElement;
 }
 
-function scrollToElement(element) {
+function scrollToElement(ele) {
 
     var scrollingElement = bodyOrHtml();
+    var element = document.getElementById(ele)
 
     console.log("-> getDirectionFromScrollToElement = " + FolioPageFragment.getDirection());
 
