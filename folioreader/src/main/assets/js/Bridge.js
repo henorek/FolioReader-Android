@@ -972,7 +972,7 @@ function scrollToElement(ele) {
             console.log("-> ourW = " + ourW);
             console.log("-> left = " + left);
 
-        var pageIndex = Math.ceil(left/ourW) -1;
+        var pageIndex = Math.ceil(ourW/left) -1;
 
 
 
