@@ -723,10 +723,8 @@ function setPageFromSpanId(idString) {
     $('body').scrollLeft(ourW * page);
     $('#'+ idString).css('font-weight','Bold');
     spanId = getFirstSpanId();
+    console.log("SpanId: " + spanId);
     scrollToElement(spanId);
-    $('html').css({
-        'visibility' : 'visible'
-    });
 }
 
 function goToHighlight(highlightId){
