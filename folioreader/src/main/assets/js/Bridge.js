@@ -716,6 +716,7 @@ function scrollToSpan2(usingId, value) {
 
     if (usingId) {
         var spanElement = document.getElementById(value);
+        console.log("Span to scrollToSpan2: " + spanElement);
         if (spanElement)
             console.log("Span to scrollToSpan2: " + spanElement);
             scrollToElement(spanElement);
