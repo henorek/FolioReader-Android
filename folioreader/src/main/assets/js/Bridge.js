@@ -956,6 +956,8 @@ function scrollToElement(element) {
     } else if (FolioPageFragment.getDirection() == "HORIZONTAL") {
 
         var clientWidth = document.documentElement.clientWidth;
+        console.log("-> offsetLeft = " + element.offsetLeft);
+        console.log("-> clientWidth = " + clientWidth);
         var pageIndex = Math.floor(element.offsetLeft / clientWidth);
         var newScrollLeft = clientWidth * pageIndex;
         console.log("-> pageIndex = " + pageIndex);
