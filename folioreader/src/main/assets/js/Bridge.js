@@ -963,7 +963,7 @@ function scrollToElement(ele) {
 
 
             var windows = document.getElementsByTagName('body')[0];
-            var d = document.getElementById(idString);
+            var d = document.getElementById(ele);
             var offsets = d.getBoundingClientRect();
             var left = offsets.left;
             var ourW = window.innerWidth;
