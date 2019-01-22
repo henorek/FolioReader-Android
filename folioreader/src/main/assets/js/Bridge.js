@@ -935,6 +935,7 @@ function scrollToElement(element) {
         var pageBottom = scrollingElement.scrollTop + document.documentElement.clientHeight
                             - FolioPageFragment.getBottomDistraction();
 
+        console.log("-> elementTo = " + element);
         var elementTop = element.offsetTop - 20;
         elementTop = elementTop < 0 ? 0 : elementTop;
         var elementBottom = element.offsetTop + element.offsetHeight + 20;
