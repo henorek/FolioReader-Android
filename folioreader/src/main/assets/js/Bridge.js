@@ -951,8 +951,8 @@ function scrollToElement(ele) {
         var clientWidth = document.documentElement.clientWidth;
         console.log("-> offsetLeft = " + element.offsetLeft);
         console.log("-> clientWidth = " + clientWidth);
-//        var pageIndex = Math.floor(element.offsetLeft / clientWidth);
-        var pageIndex = Math.floor(clientWidth / element.offsetLeft);
+        var pageIndex = Math.floor(element.offsetLeft / clientWidth);
+//        var pageIndex = Math.floor(clientWidth / element.offsetLeft);
         var newScrollLeft = clientWidth * pageIndex;
         console.log("-> pageIndex = " + pageIndex);
         console.log("-> newScrollLeft = " + newScrollLeft);
