@@ -934,7 +934,7 @@ function scrollToElement(element) {
         if (needToScroll) {
             var newScrollTop = elementTop - topDistraction;
             newScrollTop = newScrollTop < 0 ? 0 : newScrollTop;
-            //console.log("-> Scrolled to = " + newScrollTop);
+            console.log("-> Scrolled to = " + newScrollTop);
             scrollingElement.scrollTop = newScrollTop;
         }
 
@@ -943,7 +943,8 @@ function scrollToElement(element) {
         var clientWidth = document.documentElement.clientWidth;
         var pageIndex = Math.floor(element.offsetLeft / clientWidth);
         var newScrollLeft = clientWidth * pageIndex;
-        //console.log("-> newScrollLeft = " + newScrollLeft);
+        console.log("-> pageIndex = " + pageIndex);
+        console.log("-> newScrollLeft = " + newScrollLeft);
         scrollingElement.scrollLeft = newScrollLeft;
         WebViewPager.setCurrentPage(pageIndex);
     }
