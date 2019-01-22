@@ -727,6 +727,19 @@ function setPageFromSpanId(idString) {
     scrollToElement(spanId);
 }
 
+function getFirstSpanId() {
+    var elements = $('span:in-viewport');
+    var element = $(elements).first();
+    for (var i=0; i<elements.length; i++) {
+        if(elements[i].hasAttribute('id')) {
+            element = elements[i];
+            break;
+        }
+    }
+    var id = $(element).attr('id');
+    return id;
+}
+
 function goToHighlight(highlightId){
     var element = document.getElementById(highlightId.toString());
     if (element)
