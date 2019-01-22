@@ -940,11 +940,11 @@ function scrollToElement(element) {
         var elementBottom = element.offsetTop + element.offsetHeight + 20;
         var needToScroll = (elementTop < pageTop || elementBottom > pageBottom);
 
-        //console.log("-> topDistraction = " + topDistraction);
-        //console.log("-> pageTop = " + pageTop);
-        //console.log("-> elementTop = " + elementTop);
-        //console.log("-> pageBottom = " + pageBottom);
-        //console.log("-> elementBottom = " + elementBottom);
+        console.log("-> topDistraction = " + topDistraction);
+        console.log("-> pageTop = " + pageTop);
+        console.log("-> elementTop = " + elementTop);
+        console.log("-> pageBottom = " + pageBottom);
+        console.log("-> elementBottom = " + elementBottom);
 
         if (needToScroll) {
             var newScrollTop = elementTop - topDistraction;
