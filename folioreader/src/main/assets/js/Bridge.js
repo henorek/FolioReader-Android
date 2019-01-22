@@ -712,6 +712,26 @@ function scrollToSpan(usingId, value) {
     LoadingView.hide();
 }
 
+function scrollToSpan2(usingId, value) {
+
+    if (usingId) {
+        var spanElement = document.getElementById(value);
+        if (spanElement)
+            console.log("Span to scrollToSpan2: " + spanElement);
+            scrollToElement(spanElement);
+    } else {
+        var spanCollection = document.querySelectorAll("span.sentence");;
+        if (spanCollection.length == 0 || value < 0 || value >= spanCollection.length
+            || value == null) {
+            LoadingView.hide();
+            return;
+        }
+        scrollToElement(spanCollection[value]);
+    }
+
+    LoadingView.hide();
+}
+
 function setPageFromSpanId(idString) {
     console.log("Span to set: " + idString);
     var windows = document.getElementsByTagName('body')[0];
