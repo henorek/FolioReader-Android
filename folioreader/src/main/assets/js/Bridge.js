@@ -969,6 +969,9 @@ function scrollToElement(ele) {
             var ourW = window.innerWidth;
             var page = Math.ceil(left/ourW) -1;
 
+            console.log("-> ourW = " + ourW);
+            console.log("-> left = " + left);
+
         var pageIndex = Math.ceil(left/ourW) -1;
 
 
