@@ -913,6 +913,8 @@ function scrollToElement(element) {
 
     var scrollingElement = bodyOrHtml();
 
+    console.log("-> getDirectionFromScrollToElement = " + FolioPageFragment.getDirection());
+
     if (FolioPageFragment.getDirection() == "VERTICAL") {
 
         var topDistraction = FolioPageFragment.getTopDistraction();
