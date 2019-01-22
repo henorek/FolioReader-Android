@@ -967,7 +967,7 @@ function scrollToElement(ele) {
             var offsets = d.getBoundingClientRect();
             var left = offsets.left;
             var ourW = window.innerWidth;
-            var page = Math.ceil(left/ourW) -1;
+            var page = Math.ceil(ourW * 25 / left) -1;
 
             console.log("-> ourW = " + ourW);
             console.log("-> left = " + left);
